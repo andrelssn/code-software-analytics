@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Ração e Suplementos</title>
+</head>
+<body>
+    <h1>Listagem de Ração e Suplementos Arrecadados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Dia da Semana</th>
+                <th>Quantidade de Ração</th>
+                <th>Quantidade de Suplementos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(dias_da_semana|length) %}
+            <tr>
+                <td>{{ dias_da_semana[i] }}</td>
+                <td>{{ quantidade_racao[i] }}</td>
+                <td>{{ quantidade_suplementos[i] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
